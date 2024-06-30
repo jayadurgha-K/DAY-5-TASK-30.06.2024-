@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DAY-5-TASK</title>
+</head>
+<body>
+
+    
+    <script>
+        
+// Day-5-Task-1
+// Create your own resume data in JASON formate
+
+var person = {
+
+"name": "jayadurgha",
+"age": "28",
+"email":"jayadurgha04@gmail.com",
+"qualification":"B.E(ECE)",
+"expericence":[
+    {
+        "companyname":"enrichConsultancyServises",
+        "start_date":"02feb_2021",
+        "end_date":"23may_2022"
+    },
+    {
+        "companyname":"maruthiAirconEngineers",
+        "start_date":"16Nov_2022",
+        "end_date":"30june_2023"
+    }
+],
+"skills":["autocad-2D","basic_javascript"],
+"languagesKnown":["tamil","english"],
+"gender":"female",
+"maritalStatus":"married",
+"city":"ariyalur",
+"state":"Tamilnadu",
+"country":"india"
+
+
+}
+var b= JSON.stringify(person);
+console.log(b);
+console.log(person.name);
+console.log(person.age);
+console.log(person.email);
+console.log(person.expericence);
+console.log(person.expericence[0]);
+console.log(person.expericence[0].companyname);
+console.log(person.expericence[0].start_date);
+console.log(person.expericence[0].end_date);
+console.log(person.expericence[1]);
+console.log(person.expericence[1].companyname);
+console.log(person.expericence[1].start_date);
+console.log(person.expericence[1].end_date);
+console.log(person.skills);
+console.log(person.skills[0]);
+console.log(person.skills[1]);
+console.log(person.languagesKnown);
+console.log(person.languagesKnown[0]);
+console.log(person.languagesKnown[1]);
+console.log(person.gender);
+console.log(person.maritalStatus);
+console.log(person.city);
+console.log(person.state);
+console.log(person.country);
+
+// ----------------------------------------------------------------------------------------
+
+
+ //Day-5-Task-2
+ //For the above JSON ,itreate over all for loops(for,for in,for of,for each)
+
+
+
+
+ var person = {
+
+"name": "jayadurgha",
+"age": "28",
+"email":"jayadurgha04@gmail.com",
+"qualification":"B.E(ECE)",
+"expericence":[
+    {
+        "companyname":"enrichConsultancyServises",
+        "start_date":"02feb_2021",
+        "end_date":"23may_2022"
+    },
+    {
+        "companyname":"maruthiAirconEngineers",
+        "start_date":"16Nov_2022",
+        "end_date":"30june_2023"
+    }
+],
+"skills":["autocad-2D","basic_javascript"],
+"languagesKnown":["tamil","english"],
+"gender":"female",
+"maritalStatus":"married",
+"city":"ariyalur",
+"state":"Tamilnadu",
+"country":"india"
+
+
+}
+var b= JSON.stringify(person);
+console.log(b);
+var c=JSON.parse(b);
+console.log(c);
+
+// using for loop
+
+var keys = Object.keys(c)
+
+ for (var i=0 ; i<keys.length ; i++){
+    var key = keys[i];
+    var value = c[key]
+    console.log (key +":"+value);
+ }
+
+ // Using for in loop
+
+ for (var key in c){
+    console.log(c[key]);
+ }
+
+ // Using for of loop
+
+ var value = Object.values(c)
+
+ for (var obj of value){
+
+    console.log(obj);
+ }
+
+ // Using for Each loop)
+
+ value.forEach(function(obj){console.log(obj);})
+
+    </script>
+</body>
+</html>
